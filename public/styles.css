@@ -1,0 +1,62 @@
+nav{
+    background-color: burlywood;
+    color: rgb(0, 0, 0);
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav li{
+    list-style: none;
+   
+}
+nav li a{
+    color: azure;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 5px 8px;
+}
+
+nav li a:hover {
+    color: black;
+    text-decoration: overline;
+    
+}
+.jumbotron{
+    background-color: rgb(241, 234, 234);
+    padding: 20px;
+    font-weight: 100px;
+    cursor: pointer;
+}
+
+
+.lead a{
+    padding: 20px;
+    color: rgba(66, 169, 66, 0.797);
+}
+.lead a:hover{
+    color: rgba(0, 0, 255, 0.458);
+}
+
+.buttons{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    background-color: black;
+    padding: 20px;
+    justify-content: center;
+}
+.findButton{
+    padding-left: 40px;
+}
+
+
+.find{
+    text-align: right;
+}
+
