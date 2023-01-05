@@ -111,21 +111,11 @@ module.exports=(sequelize,DataTypes)=>{
         prev_research_exp:{
             type:DataTypes.STRING,
             defaultValue: "No previous research experience",
-            allowNull:false,
-            validate:{
-                notNull: {
-                    msg: 'prev_research_exp is required'
-                },
-                notEmpty:
-                {
-                    args:true,
-                    msg:'Please provide prev_research_exp '
-                }
-            }
+           
         },
         google_scholar:{
             type:DataTypes.STRING,
-            allowNull:true,
+            defaultValue: "Not provided",
   
 
         },
