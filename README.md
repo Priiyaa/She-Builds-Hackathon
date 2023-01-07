@@ -2,4 +2,5 @@
 ## TECH STACK:<br>
 Sequelize <br>
 HTML/CSS <br>
-JavaScript
+JavaScript<br>
+Unsplash API
