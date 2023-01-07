@@ -52,9 +52,28 @@ To deploy this project run
 
 
 ## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+### Home Page
+![Home Page](https://user-images.githubusercontent.com/76914418/211169107-84a5e0d1-7c18-41fe-8803-d5573bfaf3b7.png)
+<br>
+### Home Page- About Section
+![Home Page- About Section](https://user-images.githubusercontent.com/76914418/211169115-28e50481-068b-4bab-8ca8-76393dc68b0b.png)
+<br>
+### Home Page-Feature Section
+![Home Page-Feature Section](https://user-images.githubusercontent.com/76914418/211169129-7c50e05c-9ead-435e-875b-3b8d39d1008d.png)
+<br>
+### Project Form
+![Project Form](https://user-images.githubusercontent.com/76914418/211169149-bf1d63e0-20c7-4b3e-a0a4-fa36f3599e41.png)
+<br>
+### Research Form
+![Research Form](https://user-images.githubusercontent.com/76914418/211169165-10204b28-732c-4f42-b649-a20bf1626977.png)
+<br>
+![Find Research and Project](https://user-images.githubusercontent.com/76914418/211169187-5436fd23-8529-481c-beef-8143e54ff9a9.png)
+<br>
+### Find Research-card
+![Find Research-card](https://user-images.githubusercontent.com/76914418/211169196-26dde69f-4a36-4ffa-9026-c31674e0badb.png)
+<br>
+### Find Project-card
+![Find Project-card](https://user-images.githubusercontent.com/76914418/211169204-8b490905-1213-4d0c-9dbc-5982d456ee6f.png)
 
 ## Demo
 
@@ -68,7 +87,7 @@ HTML/CSS,
 JavaScript and ExpressJS,
 NodeJS,
 Unsplash API,
-MongoDB
+SQL Database
 
 ## Challenges We Tackled While Building the Web App
 
