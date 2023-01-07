@@ -1,6 +1,6 @@
 var express = require('express');
 var LoginCtrl = require('../controllers/loginController');
-const authController=require('../controllers/auth')
+// const authController=require('../controllers/auth')
 var router = express.Router();
 
 /* GET home page. */
@@ -21,15 +21,17 @@ router.get('/home',(req,res)=>{
 
 //GET FIND PROJECT page
 
-router.get('/findproject',(req,res)=>{
-  res.render('findProj.ejs');
-});
+// router.get('/fproj',(req,res)=>{
+//   res.render('findProj.ejs');
+// });
+
+
 
 //GET FIND RESEARCH page
 
-router.get('/findresearch',(req,res)=>{
-  res.render('findResearch.ejs');
-});
+// router.get('/findresearch',(req,res)=>{
+//   res.render('findResearch.ejs');
+// });
 
 //ADD PROJECT FORM
 router.get('/addproject',(req,res)=>{
@@ -41,6 +43,6 @@ router.get('/addresearch',(req,res)=>{
   res.render('researchForm.ejs');
 });
 
-router.post('/register',authController.register)
+
 
 module.exports = router;

@@ -34,6 +34,7 @@
         <h1><a href="/home">Learn<span>Up</span></a></h1>
       </div>
 
+<!-- .navbar -->
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="/home">Home</a></li>
@@ -60,31 +61,47 @@
   </section>
   <main id="main">
 
-    <!-- ======= About Section ======= -->
+    <!-- ======= Find RESEARCH SECTION  ======= -->
     <section id="about">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Find Research Ideas</h2>
         </div>
-
+        <% data.forEach(function(ivu){ %>
         <div class="container mt-4">
 
             <div class="jumbotron">
-  <h1 class="display-4">RESEARCH TITLE</h1>
-  <p class="lead"><b> <i>DOMAIN: a simple jumbotron-style</i> </b></p>
-  <p class="lead"><b> <i>Published by: Priya </i> </b></p>
-  <hr class="my-4">
-  <p>Research description: It uses utility classes for typography and spacing to space content out within the larger container.</p>
+              <div class="firstjumbo">
+                <div class="semi">
+  <h1 >   <%=ivu.research_title%></h1>
+  <p ><b> <i>DOMAIN: <%=ivu.domain%></i> </b></p>
+  <p ><b> <i>Published by:  <%=ivu.name%> </i> </b></p>
+</div>
+<!-- RANDOM IMAGE -->
+  <div class="image">
+    
+</div>
+<div class="imageDisplayWrapper" style="margin-top: 20px;">
+  <img
+    class="imageToDisplay"
+    style="width: 150px; height: 100px; border-radius: 100px solid black;"
+  />  
+
+</div>
+</div>
+
+<hr class="my-4">
+  <p>Research description: <%=ivu.research_area_desc%></p>
   
   <div class="lead">
-    <a class="btn btn-primary btn-sm" href="#" role="button">EMAIL</a>
+    <a class="btn btn-primary btn-sm" href="mailto:<%=ivu.email%>" role="button">email</a>
    
    
   </div>
 </div>
 
         </div>
-        
+        <%  })%>
 
          
         </div>
@@ -118,6 +135,33 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- RANDOM IMAGE API CODE -->
+
+  <script>
+    const requestUrl =
+      'https://api.unsplash.com/search/photos?query=research paper&client_id=xp1MflO9b1tLzKsk1lJWL-FIR9qcn3LxgaVEvEXIcRM';
+      const imageToDisplay = document.getElementsByClassName('imageToDisplay');
+  
+      async function display(){
+       
+       for(let i=0;i<imageToDisplay.length;i++){
+        let randomImage = await getNewImage();
+        imageToDisplay[i].src = randomImage;
+       }
+        }
+        display()
+
+    async function getNewImage() {
+      let randomNumber = Math.floor(Math.random() * 10);
+      return fetch(requestUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          let allImages = data.results[randomNumber];
+          return allImages.urls.regular;
+        });
+    }
+   
+  </script>
 </body>
 
 </html>

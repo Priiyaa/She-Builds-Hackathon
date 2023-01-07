@@ -612,14 +612,24 @@ body {
 
   .jumbotron{
     margin: 15px;
-    margin-right: 10em;
+    margin-right: 15em;
     border: 1px solid black;
     /* background-color: rgb(241, 234, 234); */
     padding: 20px;
     font-weight: 100px;
     cursor: pointer;
+    
+}
+.firstjumbo{
+  display: flex;
 }
 
+.image{
+  margin-top: 40px;
+  margin-left: 40em;
+  padding: 20px;
+  
+}
 
 .lead a{
     padding: 20px;

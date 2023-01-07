@@ -18,20 +18,14 @@ require('dotenv').config();
 var {projDetails:ProjDetails} = require('./models');
 const jsonParser = bodyParser.json()
 var {researchDetails:ResearchDetails} = require('./models');
-//const ProjDetails =require('./models/projDetails');
-
-//const projDetails = require('./models/projDetails');
-
-// app.get('/addproject',function(req,resp){
-//     ProjDetails.findAll().then(projDetails=>resp.json(projDetails))
-// })
-//CREATING API
 app.use(bodyParser.json());
-// app.post('/pform',function(req,res){
-//     ProjDetails.create({name:req.body.name}).then(function(projDetails){
-// res.json(projDetails);});
-// })
+const fetch = require('node-fetch');
 
+app.set('vie engine','hbs');
+app.set('views', path.join(__dirname, 'views'));
+app.set('vie engine','ejs');
+
+//POST PROJECT FORM DATA
 app.post('/pform', async (req,res) => {
     try
     {
@@ -88,7 +82,6 @@ app.post('/pform', async (req,res) => {
         res.status(201).redirect("/home");
     
     }
-
     
     catch (error) {
       res.status(422).send("error")
@@ -96,19 +89,29 @@ app.post('/pform', async (req,res) => {
     
   })
 
+//DISPLAY PROJECT CARDS
+    app.get("/findproject",(req,res)=>{
+ ProjDetails.findAll({}).then(data=>{
+    res.render("findProj.ejs",{data:data});
+  })
+})
+
+//DISPLAY RESEARCH CARDS
+app.get("/findresearch",(req,res)=>{
+  ResearchDetails.findAll({}).then(data=>{
+     res.render("findResearch.ejs",{data:data});
+   })
+ })
+    
 
 
-
-  
-  app.set('vie engine','hbs');
-  app.set('vie engine','ejs');
-
+//hello page
 app.get("/",(req,resp)=>{
-    resp.send("Home page");
+    resp.send("Hello");
 })
 
 
-
+//getting all the routes from routes->index
 app.use('/',require('./routes/index'));
 
 
