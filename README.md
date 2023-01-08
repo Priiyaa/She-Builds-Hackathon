@@ -78,7 +78,7 @@ To deploy this project run
 
 ## Demo
 
-Insert gif or link to demo
+https://youtu.be/Rp66VWi5NLk
 
 
 ## Techstack
