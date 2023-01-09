@@ -78,7 +78,9 @@ To deploy this project run
 
 ## Demo
 
- https://youtu.be/Rp66VWi5NLk
+https://youtu.be/Rp66VWi5NLk
+ 
+https://user-images.githubusercontent.com/96445392/211330290-a6124d73-3a6d-49d9-920e-3fabc02e2e45.mp4
 
 
 ## Techstack
